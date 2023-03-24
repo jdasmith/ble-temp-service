@@ -5,6 +5,10 @@ bluetooth.onBluetoothConnected(function () {
 bluetooth.startTemperatureService()
 let num_connects = 0
 basic.forever(function () {
+    basic.showString("Num Connects: ")
     basic.showNumber(num_connects)
-    basic.pause(2000)
+    basic.pause(1000)
+    basic.showString("Temperature: ")
+    basic.showNumber(input.temperature())
+    basic.pause(1000)
 })
